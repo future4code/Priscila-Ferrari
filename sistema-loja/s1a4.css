@@ -1,13 +1,27 @@
+* {
+    
+
+    margin: 0;
+    padding: 0;
+}
 body{
     background-color: azure;
+    text-align: center;
+    align-items: center;
+    
+    
 }
-.cabeçalho{
+.header {
+height: 80px;
 background-color: forestgreen;
-color: white;
+color:white;
+font-size: 20px;
+
+
 }
 
 .imagens{
-    Style=
+    align-self: auto;
     height: 20px;
     width: 20px;
 }
