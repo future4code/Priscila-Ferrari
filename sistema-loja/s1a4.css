@@ -1,0 +1,13 @@
+body{
+    background-color: azure;
+}
+.cabeçalho{
+background-color: forestgreen;
+color: white;
+}
+
+.imagens{
+    Style=
+    height: 20px;
+    width: 20px;
+}
