@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto';
+    font-family: 'Roboto Slab';
     text-align: center;
     
    }
@@ -17,21 +18,12 @@ header {
 }
 
 .atalhos{
-    /* background-color:#00688B; */
-    /* background:#00688B; 
-    border-radius: 6px; 
-    padding: 5px; 
-    ; 
-    color: #fff; 
-    border: none; 
-    font-size: 20px;
-    text-decoration: none;
-    display: block; */
+
     display: block;
     width: 160px;
     height: 40px;
     line-height: 40px;
-    /* padding: 10px; */
+
     margin: 20px;
     background-color:#00688B;
     color: #FFF;
@@ -42,27 +34,51 @@ header {
     cursor: pointer
 }
 main{
-    
+    padding-left: 50px;
     padding-top: 100px;
-    padding-bottom: 600px;
+    padding-right: 50px;
+    padding-bottom: 500px;
     background: #528B8B;
-    
 }
-.textoSobreMim {
-    text-align: right;
-    padding: 20px;
+.nomePrincipal{
     color: white;
 
+#fotinha{
+    width: 60px;
+    height: 60px;  
 }
+}
+.textoSobreMim {
+    text-align: left;
+    
+    color: white;
+}
+.tabela{
+    text-align: right;
+    border: 1px solid black;
+
+}
+
 footer{
     position: fixed;
-    background:#8B8386 ;
-    padding-bottom: 1150px;
-    padding-top: 25px;
-    border-color:#8B8386 ;
-    margin-bottom: 0;
+    background:#E0EEE0 ;
+    bottom: 0;
     width: 100%;
 }
 .iconesRodape{
-    
+    width: 60px;
+    height: 60px;
+}
+.topicoExp{
+    text-align: left;
+}
+.prjt{
+    width: 200px;
+    height: 200px;
+
+}
+.prjt2{
+    width: 500px;
+    height: 500px;
+
 }
