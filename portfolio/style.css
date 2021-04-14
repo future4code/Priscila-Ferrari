@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab';
+    text-align: center;
+    
+   }
+header {
+ width: 100%;
+ position: fixed;
+ text-align: center;
+ 
+ background: #E0EEE0;
+ display: flex;
+  
+}
+
+.atalhos{
+
+    display: block;
+    width: 160px;
+    height: 40px;
+    line-height: 40px;
+
+    margin: 20px;
+    background-color:#00688B;
+    color: #FFF;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer
+}
+main{
+    padding-left: 50px;
+    padding-top: 100px;
+    padding-right: 50px;
+    padding-bottom: 500px;
+    background: #528B8B;
+}
+.nomePrincipal{
+    color: white;
+
+#fotinha{
+    width: 60px;
+    height: 60px;  
+}
+}
+.textoSobreMim {
+    text-align: left;
+    
+    color: white;
+}
+.tabela{
+    text-align: right;
+    border: 1px solid black;
+
+}
+
+footer{
+    position: fixed;
+    background:#E0EEE0 ;
+    bottom: 0;
+    width: 100%;
+}
+.iconesRodape{
+    width: 60px;
+    height: 60px;
+}
+.topicoExp{
+    text-align: left;
+}
+.prjt{
+    width: 200px;
+    height: 200px;
+
+}
+.prjt2{
+    width: 500px;
+    height: 500px;
+
+}
