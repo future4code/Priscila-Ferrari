@@ -1,0 +1,39 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box
+    
+}
+body{
+    height: 100vh;
+    width: 100vw;
+}
+header{
+    background-color: black;
+    color: white;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+div div{
+ display: grid;
+ 
+}
+.videos{
+ display: grid; 
+ grid-template-columns: 1fr 1fr 1fr 1fr;
+ grid-template-rows: 1fr 1fr 1fr 1fr;
+/*  column-gap: 20px;
+ row-gap: 50 px; */
+ margin: 50px;
+}
+footer{
+    display: flex;
+    background-color: #f8f8f8;
+    color: grey;
+    height: 80px;
+    align-content: center;
+
+}
