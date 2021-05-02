@@ -16,19 +16,41 @@ return ultimoNumero
 
 function retornaNumerosParesElevadosADois (array) {
    // implemente sua lógica aqui
+
+   let arraySaida = []
+   for (let i = 0; i < array.length; i++){
+      if (array[i] % 2 === 0) {
+         arraySaida.push(array[i] * array [i])
+      }      
+   }
+   return arraySaida
 }
 
 //Exercício 3
 
-function retornaNumerosPares (array) {
-   // implemente sua lógica aqui
-}
+// function retornaNumerosPares (array) {
+//    // implemente sua lógica aqui
+//    let numerosPares = []
+//    for (let i = 0; i < array.length;i++){
+//       if (array[i] % 2 === 0){
+//       numerosPares.push(array[i])
+//       }
+//    }
+//    return numerosPares
+// }
 
-//Exercício 4
+// //Exercício 4
 
-function retornaMaiorNumero(array) {
-   // implemente sua lógica aqui
-}
+// function retornaMaiorNumero(array) {
+//    // implemente sua lógica aqui
+//    let maiorNumero = 0
+//    for(let i=0;i<array.length;i++){
+//       if (array[i]> maiorNumero){
+//          maiorNumero = array[i]
+//       }
+//    }
+//    return maiorNumero
+// }
 
 //Exercício 5
 
