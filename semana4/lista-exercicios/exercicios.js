@@ -71,9 +71,21 @@ function retornaExpressoesBooleanas() {
 }
 
 //Exercício 7
+//Escreva uma função que, recebendo um número N como parâmetro, retorne os N primeiros números pares (por exemplo, se N for 3, você deve imprimir 0, 2 e 4; se N for 5, deve retornar 0, 2, 4, 6 e 8). 
 
 function retornaNNumerosPares(n) {
    // implemente sua lógica aqui
+   
+   let soPares = []
+   let i = 0
+   while (soPares.length < n){
+      if(i%2 === 0){
+         soPares.push(i)
+      }
+      i++
+      
+      
+   }return soPares
 }
 
 // Exercício 8
