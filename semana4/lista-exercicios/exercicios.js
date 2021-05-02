@@ -2,10 +2,18 @@
 
 function inverteArray(array) {
   // implemente sua lógica aqui
+  
+  let ultimoNumero = []
+  for(let i = array.length - 1; i >= 0; i--){
+     
+        ultimoNumero.push(array[i])
+   }
+return ultimoNumero
+  
 }
 
 //Exercício 2
-chorando se foi...
+
 function retornaNumerosParesElevadosADois (array) {
    // implemente sua lógica aqui
 }
