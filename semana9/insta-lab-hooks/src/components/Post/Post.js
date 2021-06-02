@@ -18,35 +18,33 @@ const Post = (props) => {
 
   const onClickCurtida = () => {
     if(curtido){
-      setCurtido(!curtido)
-      setNumeroCurtidas(numeroCurtidas - 1)
+      setCurtido(false)
+      setNumeroCurtidas(0)
     }else{
-      setCurtido(!curtido)
-      setNumeroCurtidas(numeroCurtidas + 1)
+      setCurtido(true)
+      setNumeroCurtidas(1)
     }
   };
 
   const onClickComentario = () => {
-    setComentando(!comentando)
+    setComentando(!comentando);
   };
 
   const enviarComentario = (comentario) => {
-    const listaDeComentarios = [...comentarios, comentario]
+    setNumeroComentarios(numeroComentarios + 1);
+    const listaDeComentarios = [...comentarios, comentario];
+    setComentando(false);
+    setComentarios(listaDeComentarios);
+    };
 
-    
-      setComentarios (listaDeComentarios),
-      setComentando (!comentando),
-      setNumeroComentarios (numeroComentarios + 1)
-    }
-  }
-  const iconeCurtida = curtido ? (iconeCoracaoPreto) : (iconeCoracaoBranco)
+  const iconeCurtida = curtido ? iconeCoracaoPreto : iconeCoracaoBranco;
 
   const caixaDeComentario = comentando ? (
    
     <SecaoComentario enviarComentario={enviarComentario}/>
   ) : (
     
-    map(comentario => {
+    comentarios.map(comentario => {
       return (
         <CommentContainer>
           <p>{comentario}</p>

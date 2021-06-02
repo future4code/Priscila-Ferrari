@@ -7,26 +7,28 @@ const CommentContainer = styled.div`
     padding: 5px;
 `
 
-const InputComment = styled.input `
+const InputComment = styled.input`
     width: 100%;
     margin-right: 5px;
 `
 
-const SecaoComentario = (props) => {
-
+export const SecaoComentario = (props) => {
+	const [entradaComentario, setEntradaComentario] = useState("");
 
 	const onChangeComentario = (event) => {
-	}
+		setEntradaComentario(event.target.value);
+	};
 
 	return (
 		<CommentContainer>
 			<InputComment
-				className={'input-comentario'}
 				placeholder={'Comentário'}
-				value={""}
+				value={entradaComentario}
 				onChange={onChangeComentario}
 			/>
-			<button onClick={() => { props.enviarComentario() }} >Enviar</button>
+			<button onClick={() => { 
+				props.enviarComentario(entradaComentario); 
+				}} >Enviar</button>
 		</CommentContainer>
 	)
 }
