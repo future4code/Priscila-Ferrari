@@ -1,5 +1,6 @@
 import React from "react";
-import {Switch, Router, BrowserRouter} from 'react-router-dom';
+import { useHistory } from "react-router-dom";
+import { goAdminHomePage, goHomePage } from "../routes/coordinator";
 
 const LoginPage = () => {
     const history = useHistory();
@@ -7,7 +8,8 @@ const LoginPage = () => {
       <div>
        LoginPage
 
-       <button>oi</button>
+       <button onClick={() => goHomePage(history)} >Home Page</button>
+       <button onClick={() =>goAdminHomePage(history)} >Pagina administrativa depois de logar</button>
       </div>
     );
   }

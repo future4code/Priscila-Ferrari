@@ -1,5 +1,6 @@
 import React from "react";
-import {Switch, Router, BrowserRouter} from 'react-router-dom';
+import { useHistory } from "react-router-dom";
+import { goHomePage, goLoginPage } from "../routes/coordinator";
 
 const TripDetailsPage = () => {
     const history = useHistory();
@@ -7,8 +8,8 @@ const TripDetailsPage = () => {
       <div>
        TripDetailsPage
 
-       <button>Home Page</button>
-       <button>Area Administrativa</button>
+       <button onClick={() => goHomePage(history)} >Home Page</button>
+       <button onClick={() => goLoginPage(history)} >Area Administrativa</button>
       </div>
     );
   }

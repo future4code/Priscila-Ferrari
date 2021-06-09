@@ -1,13 +1,16 @@
 import React from "react";
-import {Switch, Router, BrowserRouter} from 'react-router-dom';
+import { useHistory } from "react-router-dom";
+import { goHomePage, goCreateTripPage, goTripDetailsPage } from "../routes/coordinator";
 
 const AdminHomePage = () => {
     const history = useHistory();
     return (
       <div>
        AdminHomePage
-
-       <button>oi</button>
+       <button onClick={() => goHomePage(history)}>Home Page</button>
+       <button onClick={() => goTripDetailsPage(history)} >Lista de viagens</button>
+       <button onClick={() => goCreateTripPage(history)} >Criar Viagens</button>
+       <button onClick={history.goBack} >Voltar</button>
       </div>
     );
   }
