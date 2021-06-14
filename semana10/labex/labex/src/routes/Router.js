@@ -8,12 +8,24 @@ import ListTripPage from "../pages/ListTripPage";
 import LoginPage from "../pages/LoginPage";
 import TripDetailsPage from "../pages/TripDetailPages";
 import ErrorPage from "../pages/ErrorPage";
+import styled from "styled-components";
+
+const Container = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 16px;
+margin: 5px
+`;
 
 const Router = () => {
     return (
         <BrowserRouter>
+
+        <Container>
             <Switch>
                 <Route exact path="/admin/trips/list">
+                    
                     <AdminHomePage />
                 </Route>
 
@@ -46,6 +58,7 @@ const Router = () => {
                 </Route>
 
             </Switch>
+            </Container>
         </BrowserRouter>
     );
 };

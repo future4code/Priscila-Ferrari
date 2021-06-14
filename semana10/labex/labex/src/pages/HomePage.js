@@ -7,8 +7,8 @@ const HomePage = () => {
     return (
       <div>
        HomePage
-       <button onClick={() =>goLoginPage(history)} >Area Administrativa</button>
-       <button onClick={() =>goListTripPage(history)} >Lista de Viagens</button>
+       <div><button onClick={() =>goLoginPage(history)} >Area Administrativa</button>
+       <button onClick={() =>goListTripPage(history)} >Lista de Viagens</button></div>
       </div>
     );
   }
