@@ -1,17 +1,25 @@
 import React from "react";
 import useForm from "../../hooks/useForm"
+import useUnprotectedPage from "../../hooks/useUnprotectedPage";
+import { signUp } from "../../services/users";
+import { useHistory } from 'react-router-dom'
+import { goHomePage } from "../../routes/coordinator";
 
-const SignUpPage = () => {
-  const [form,onChange,clear] = useForm({username:"",email:"",password:""})
+const SignUpPage = ({setRightButtonText}) => {
+  const history = useHistory()
+  useUnprotectedPage()
+
+  const {form,onChange,clear} = useForm({username:"", email:"", password:""})
 
   const onSubmitForm = (event) =>{
     event.preventDefault()
+    signUp(form, clear, history,setRightButtonText)
   }
   return (
     <div>
-      <h2>SignUp Page<button>HomePage</button></h2>
+      <h2>SignUp Page<button onClick={() => goHomePage(history)}>HomePage</button></h2>
       <div>
-        <form onSubmitForm={onSubmitForm}>
+        <form setRightButtonText={setRightButtonText} onSubmit={onSubmitForm}>
         <input 
         placeholder="Nome de Usuário"
         name={"username"}
@@ -36,7 +44,7 @@ const SignUpPage = () => {
         required
         type={"password"}
         />
-        <div><button>Cadastrar</button></div>
+        <div><button type= {"submit"}>Cadastrar</button></div>
         </form>
       </div>
       

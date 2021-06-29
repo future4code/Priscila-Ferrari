@@ -3,31 +3,29 @@ import { useHistory } from "react-router-dom";
 import { goSignUpPage } from "../../routes/coordinator";
 import Button from '@material-ui/core/Button';
 import useForm from "../../hooks/useForm";
-import { BASE_URL } from "../../constants/urls";
-import axios from "axios"
+import useUnprotectedPage from "../../hooks/useUnprotectedPage";
+import {login} from "../../services/users"
 
 
 
-const HomePage = () => {
-    const [form,onChange,clear] = useForm({email:"",password:""})
-    const onSubmitForm = (event) => {
-        event.preventDefault()
-        login()
-    }
-    const login = () => {
-        axios.post(`${BASE_URL}/users/login`,form,{headers: { 
-            'Content-Type': 'application/json'
-        }})
-        .then((res)=>console.log(res))
-        .catch((err)=>console.log(err))
-    }
+const HomePage = ({rightButtonText,setRightButtonText}) => {
+    useUnprotectedPage()
+    const {form, onChange, clear} = useForm({email:"", password:""})
 
     const history = useHistory();
+
+    const onSubmitForm = (event) => {
+        event.preventDefault()
+        login(form, clear,history,setRightButtonText)
+    }
+    
+
+    
     return (
         <div>
             <h2>Home Page</h2>
             <div>
-            <form onSubmit={onSubmitForm}>
+            <form rightButtonText={rightButtonText} setRightButtonText={setRightButtonText} onSubmit={onSubmitForm}>
             <input 
             placeholder="Email" 
             name={"email"}

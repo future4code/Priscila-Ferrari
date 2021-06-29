@@ -1,23 +1,23 @@
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import HomePage from "../pages/HomePage/HomePage";
 import SignUpPage from "../pages/SignUpPage/SignUpPage";
 import PostPage from "../pages/PostPage/PostPage";
 import CommentsPage from "../pages/CommentsPage/CommentsPage";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
-import Header from "../components/Header/Header"
 
 
-const Router = () => {
+
+const Router = ({setRightButtonText}) => {
     return (
-        <BrowserRouter>
-        <Header />
+        
+        
         <Switch>
             <Route exact path="/">
-                <HomePage />
+                <HomePage setRightButtonText={setRightButtonText} />
             </Route>
             <Route exact path="/signup">
-                <SignUpPage />
+                <SignUpPage setRightButtonText={setRightButtonText}/>
             </Route>
             <Route exact path="/posts">
                 <PostPage />
@@ -29,7 +29,7 @@ const Router = () => {
                 <ErrorPage />
             </Route>
         </Switch>
-        </BrowserRouter>
+        
     );
 };
 

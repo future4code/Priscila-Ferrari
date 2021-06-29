@@ -1,8 +1,10 @@
 import React from "react";
 import { useHistory } from "react-router";
+import useProtectedPage from "../../hooks/useProtectedPage";
 import { goHomePage } from "../../routes/coordinator";
 
 const CommentsPage = () => {
+  useProtectedPage()
     const history = useHistory ();
   return (
     <div>
