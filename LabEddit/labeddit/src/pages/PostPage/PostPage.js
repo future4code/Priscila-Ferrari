@@ -5,11 +5,7 @@ import useRequestData from "../../hooks/useRequestData";
 import { BASE_URL } from "../../constants/urls";
 
 const PostPage = () => {
-  useProtectedPage()
-  const posts = useRequestData([],`${BASE_URL}/posts`)
-  console.log(posts)
-
-  
+  useProtectedPage()  
     const history = useHistory();
   return (
     <div>
