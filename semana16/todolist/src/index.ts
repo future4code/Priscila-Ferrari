@@ -21,7 +21,7 @@ export const connection = knex({
 const app = express ()
 app.use(express.json())
 
-app.put("/",createUser)
+app.put("/user",createUser)
 
 app.listen(3003, ()=>{
     console.log("Servidor na porta 3003")
