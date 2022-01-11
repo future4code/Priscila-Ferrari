@@ -11,9 +11,8 @@ const HomePage = () => {
     const movies = useRequestData([],`${BASE_URL}/popular?api_key=${API_KEY}`)
     console.log(movies)
 
-   
     
-
+   
     return(
         <div>
         <Header />
@@ -31,3 +30,4 @@ const HomePage = () => {
 }
 
 export default HomePage;
+    
